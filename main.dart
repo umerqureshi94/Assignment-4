@@ -1,5 +1,3 @@
-import 'dart:io';
-
 // Q1. Consider the code:
 // List nameList = [Bilal, Bilal, Bilal, Owais, Owais, Owais];
 // What can to be done in order to not repeat Bilal and Owais multiple times?
@@ -13,6 +11,15 @@ import 'dart:io';
 //   list.forEach((f) => print(f));
 // }
 
+// Q2. Let’s say you are given a list saved in a variable:
+// Consider a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
+// Write a code that takes this list and makes a new list that has only the even elements of this list in it.
+void main() {
+  List<int> a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+  List<int> b = [];
+  for (int i = 0; i < a.length; i++) {}
+  print(b);
+}
 // Q3. Write a program to print multiplication table of 7 length 15 using loop.
 // void main() {           // Complete
 //   int a = 7;
@@ -94,12 +101,14 @@ import 'dart:io';
 //   }
 // }
 
-// 10. Write a program to reverse a strin
-//g. For example, if my string is
-// "natsikaP nawaJ" then my result will be "Jawan Pakistan".
+// // 10. Write a program to reverse a strin
+// //g. For example, if my string is
+// // "natsikaP nawaJ" then my result will be "Jawan Pakistan".
 
 // void main() {
-
+//   var input = "Jawan Pakistan";
+//   final output = input.split('').reversed.join('');
+//   print(output);
 // }
 
 //Q12 Find the missing number in array of 1 to 100?
@@ -199,7 +208,7 @@ import 'dart:io';
 //     for (var j = numList[i] + 1; j < numList[i + 1]; j++) {
 //       print("The missing number in the given list are: $j");
 //     }
-//   } 
+//   }
 // }
 
 // for (var i = 0; i < numList.length; i++) {
@@ -208,25 +217,21 @@ import 'dart:io';
 //   }
 //   return null; // No missing value
 
-
-
 // // Q13. List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
 // // Find the largest and smallest number in an unsorted integer array?
 
-
 // void main() {
-//   List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];  
-  
-    
+//   List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
+
 //   var largest = unsortedList[0];
 //   var smallest = unsortedList[0];       // Complete
-  
+
 //   for (var i = 0; i < unsortedList.length; i++) {
-      
+
 //     if (unsortedList[i] > largest) {
 //       largest = unsortedList[i];
 //     }
-      
+
 //    else if (unsortedList[i] < smallest) {
 //       smallest = unsortedList[i];
 //     }
@@ -235,20 +240,81 @@ import 'dart:io';
 //   print("Smallest value in the list : $smallest");
 //   print("Largest value in the list : $largest");
 // }
-// void main() {
-//   List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
-//   int max = 0;
-//   int min = 10 ;        // Not working on minimum
-
-//   for (int i = 0; i < unsortedList.length; i++) {
-//     if (unsortedList[i] > max) {
-//       max = unsortedList[i];
-//     } else if (unsortedList[i] < min) {
-
-//       min = unsortedList[i];
-//     }
-//   };
 
 //   print(min);
 //   print(max);
+// }
+// //Q14. Let, int number = 18;
+// //Find all pairs of an integer array whose sum is equal to a given number?
+// void main() {
+//   List arr = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
+//   int n = arr.length;
+//   int sum = 4;
+
+//   for (int i = 0; i < n; i++) {
+//     for (int j = i + 1; j < n; j++) {
+//       if (arr[i] + arr[j] == sum) {
+//         print(arr[i] + arr[j]);
+        
+//       }
+//     }
+//   }
+// }
+
+// // Q15. Create a Marks sheet using loop with given data also add 5 Subjects in root directory.
+// void main() {
+//   List mylist = [
+//     {
+//       "ID": "01",
+//       "Name": "Aslam",
+//       "Phone": "02134589658",
+//       "Subject": [
+//         {'ENG': 85, 'URDU': 65, 'MATHS': 75, 'SCIENCE': 45}
+//       ],
+//     },
+//     {
+//       "ID": "02",
+//       "Name": "Raqib",
+//       "Phone": "02136587458",
+//       "Subject": [
+//         {'ENG': 72, 'URDU': 48, 'MATHS': 92, 'SCIENCE': 81}
+//       ],
+//     },
+//     {
+//       "ID": "03",
+//       "Name": "John",
+//       "Phone": "02136598741",
+//       "Subject": [
+//         {'ENG': 87, 'URDU': 85, 'MATHS': 55, 'SCIENCE': 95}
+//       ],
+//     },
+//     {
+//       "ID": "04",
+//       "Name": "Sherry",
+//       "Phone": "03452814565",
+//       "Subject": [
+//         {'ENG': 55, 'URDU': 65, 'MATHS': 45, 'SCIENCE': 65}
+//       ],
+//     },
+//     {
+//       "ID": "05",
+//       "Name": "Nasir",
+//       "Phone": "02132548796",
+//       "Subject": [
+//         {'ENG': 75, 'URDU': 55, 'MATHS': 85, 'SCIENCE': 95}
+//       ],
+//     },
+//   ];
+
+//   for (var i = 0; i <= mylist.length; i++) {
+//     print("==========MARKSHEET================");
+//     print(mylist[i]["Name"]);
+//     print(mylist[i]["Phone"]);
+//     print("Maks of ENGLISH is: ${mylist[i]["Subject"][i]['ENG']}");
+//     print("Maks of URDU is: ${mylist[i]["Subject"][i]['URDU']}");
+//     print("Maks of MATH is: ${mylist[i]["Subject"][i]['MATHS']}");
+//     print("Maks of SCIENCE is: ${mylist[i]["Subject"][i]['SCIENCE']}");
+//     print(
+//         "Total Marks is: ${(mylist[i]["Subject"][i]['ENG']) + (mylist[i]["Subject"][i]['URDU']) + (mylist[i]["Subject"][i]['MATHS']) + (mylist[i]["Subject"][i]['SCIENCE'])}");
+//   }
 // }
